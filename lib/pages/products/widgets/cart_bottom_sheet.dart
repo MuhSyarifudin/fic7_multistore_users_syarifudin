@@ -148,7 +148,9 @@ class CartBottomSheetState extends State<CartBottomSheet> {
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
-                      quantity -= 1;
+                      if (quantity > 0) {
+                        quantity -= 1;
+                      } else {}
                     });
                   },
                   child: const Text('-'),
